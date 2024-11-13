@@ -103,3 +103,49 @@ a:hover {
     animation: fadeIn 1.5s ease-out 2s forwards; /* Duration: 1.5s, Delay: 2s */
 }
 
+/* Container for the horizontal reveal effect */
+.reveal-container {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.reveal-container::before,
+.reveal-container::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 0;
+    background: #333;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: width 1.5s ease;
+}
+
+.reveal-container::before {
+    left: 0;
+}
+
+.reveal-container::after {
+    right: 0;
+}
+
+.reveal-container p {
+    opacity: 0;
+    animation: fadeIn 1s ease 1.5s forwards;
+}
+
+/* Trigger the horizontal bars to expand and reveal the text */
+.reveal-container:hover::before,
+.reveal-container:hover::after {
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
