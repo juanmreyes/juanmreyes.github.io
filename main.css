@@ -58,28 +58,48 @@ a:hover {
     color: #1565c0;
 }
 
-/* Navigation bar styling */
+/* Basic styling for the navbar items */
 .navbar {
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: flex-end; /* Aligns items to the right */
+    justify-content: flex-end;
     margin-bottom: 20px;
 }
 
 .navbar li {
     margin: 0 15px;
+    position: relative; /* Necessary for positioning the pseudo-element */
 }
 
 .navbar a {
-    color: black; /* Sets font color to black */
+    color: black;
     text-decoration: none;
     padding: 10px 15px;
-    display: block;
+    display: inline-block;
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
+/* Change text color on hover */
 .navbar a:hover {
-    color: #217ee7; /* Changes color on hover */
+    color: #217ee7; /* Change to your desired color */
+}
+
+/* Animation for the horizontal line on hover */
+.navbar li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0; /* Initially hidden */
+    height: 2px; /* Thickness of the line */
+    background-color: #217ee7; /* Color of the line */
+    transition: width 0.3s ease; /* Animation effect */
+}
+
+/* On hover, animate the line to appear under the text */
+.navbar li:hover::after {
+    width: 100%; /* Expands the line to the full width of the link */
 }
 
 .small-font {
