@@ -59,8 +59,7 @@ a:hover {
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: center;
-    background-color: #333;
+    justify-content: flex-end; /* Aligns items to the right */
     margin-bottom: 20px;
 }
 
@@ -69,14 +68,12 @@ a:hover {
 }
 
 .navbar a {
-    color: white;
+    color: black; /* Sets font color to black */
     text-decoration: none;
     padding: 10px 15px;
     display: block;
 }
 
 .navbar a:hover {
-    background-color: #217ee7;
-    color: #fff;
-    border-radius: 5px;
+    color: #217ee7; /* Changes color on hover */
 }
