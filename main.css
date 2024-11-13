@@ -86,23 +86,6 @@ a:hover {
     font-size: 0.7em; /* Adjust the size as needed */
 }
 
-/* Fade-in animation */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(10px); /* Start slightly below */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); /* End in the original position */
-    }
-}
-
-.animated-text {
-    opacity: 0; /* Initially hidden */
-    animation: fadeIn 1.5s ease-out 2s forwards; /* Duration: 1.5s, Delay: 2s */
-}
-
 /* Container for the horizontal reveal effect */
 .reveal-container {
     position: relative;
@@ -148,4 +131,13 @@ a:hover {
     to {
         opacity: 1;
     }
+}
+
+/* Background image for the entire webpage */
+body {
+    background-image: url('wallpaper.jpg'); /* Replace with the path to your wallpaper image */
+    background-size: cover; /* Scales the image to cover the entire viewport */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the wallpaper fixed while scrolling */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
 }
