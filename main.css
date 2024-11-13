@@ -81,3 +81,7 @@ a:hover {
 .navbar a:hover {
     color: #217ee7; /* Changes color on hover */
 }
+
+.small-font {
+    font-size: 0.9em; /* Adjust the size as needed */
+}
