@@ -39,18 +39,25 @@
   </head>
 
   <body>
-    <!-- Navigation bar -->
-    <nav>
-      <ul class="navbar">
-        <li><a href="#news">News</a></li>
-        <li><a href="#cv">CV</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#workshops">Workshops</a></li>
-        <li><a href="#notes">Notes and Codes</a></li>
-        <li><a href="#teaching">Teaching</a></li>
-      </ul>
-    </nav>
-    
+  <!-- Hamburger Menu Icon -->
+  <div class="menu-icon" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- Navigation bar -->
+  <nav id="menu" class="hidden-menu">
+    <ul class="navbar">
+      <li><a href="/home/">Home</a></li>
+      <li><a href="/news/">News</a></li>
+      <li><a href="/cv/">CV</a></li>
+      <li><a href="/research/">Research</a></li>
+      <li><a href="/workshops/">Workshops</a></li>
+      <li><a href="/notes/">Notes and Codes</a></li>
+      <li><a href="/teaching/">Teaching</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Main content -->
     <section id="content">
       <!-- Avatar image -->
       <img src="photo.png" alt="Carl Barks" class="avatar" />
@@ -89,6 +96,14 @@
         </li>
       </ul>
     </section>
-  </body>
+  
+    <script>
+    // JavaScript to toggle the menu
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('show-menu');
+    }
+  </script>
+</body>
  
 </html>
