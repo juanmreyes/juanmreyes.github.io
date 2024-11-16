@@ -34,6 +34,97 @@ a:hover {
     width: 150px;
 }
 
+/* Menu Trigger */
+.menu-trigger {
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+    color: #333;
+    font-weight: bold;
+}
+
+.menu-trigger:hover {
+    color: #1565c0;
+}
+
+/* Hidden Navigation Menu */
+.hidden-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially off-screen */
+    width: 250px;
+    height: 100%;
+    background: #f9f9f9;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    transition: right 0.5s ease; /* Slide-in effect */
+}
+
+.hidden-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    opacity: 0; /* Initially invisible */
+    transform: translateX(20px); /* Slightly shifted for animation */
+    animation: fadeInMenu 0.5s ease forwards;
+}
+
+.hidden-menu ul li {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    animation: fadeInItem 0.5s ease forwards;
+    animation-delay: var(--delay);
+    transform: translateX(20px);
+    opacity: 0;
+}
+
+.hidden-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.hidden-menu ul li a:hover {
+    color: #1565c0;
+}
+
+/* When the menu is shown */
+.show-menu {
+    right: 0; /* Slide-in effect */
+}
+
+/* Keyframes for menu fade-in animation */
+@keyframes fadeInMenu {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Keyframes for individual menu items */
+@keyframes fadeInItem {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
 .icons {
     list-style-type: none;
     font-size: xx-large;
