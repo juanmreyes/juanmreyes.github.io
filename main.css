@@ -1,3 +1,4 @@
+/* Global Styles */
 html {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: larger;
@@ -13,12 +14,12 @@ a:hover {
     color: #217ee7;
 }
 
+/* Main Content */
 #content {
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%) ;
+    transform: translate(-50%, -50%);
     text-align: center;
     max-width: 520px;
     padding: 32px;
@@ -26,7 +27,7 @@ a:hover {
 }
 
 #content p {
-    text-align: justify; /* Justifies paragraph text */
+    text-align: justify;
 }
 
 .avatar {
@@ -34,7 +35,31 @@ a:hover {
     width: 150px;
 }
 
-/* Menu Trigger */
+/* Icons */
+.icons {
+    list-style: none;
+    font-size: xx-large;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 320px;
+    margin: 1em auto;
+}
+
+.icons li {
+    width: 42px;
+}
+
+.icons a {
+    color: black;
+}
+
+.icons a:hover {
+    color: #1565c0;
+}
+
+/* Hamburger Menu Trigger */
 .menu-trigger {
     font-size: 1.5rem;
     cursor: pointer;
@@ -54,35 +79,36 @@ a:hover {
 .hidden-menu {
     position: fixed;
     top: 0;
-    right: -100%; /* Initially off-screen */
+    right: -100%; /* Off-screen initially */
     width: 250px;
     height: 100%;
     background: #f9f9f9;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     z-index: 999;
-    transition: right 0.5s ease; /* Slide-in effect */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 20px;
+    transform: translateX(100%);
+    transition: transform 0.5s ease; /* Smooth slide-in */
 }
 
 .hidden-menu ul {
     list-style: none;
     margin: 0;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    opacity: 0; /* Initially invisible */
-    transform: translateX(20px); /* Slightly shifted for animation */
-    animation: fadeInMenu 0.5s ease forwards;
+    padding: 0;
+    width: 100%;
 }
 
 .hidden-menu ul li {
     font-size: 1.2rem;
     font-weight: bold;
     color: black;
+    opacity: 0; /* Initially invisible */
+    transform: translateX(20px); /* Start shifted */
     animation: fadeInItem 0.5s ease forwards;
-    animation-delay: var(--delay);
-    transform: translateX(20px);
-    opacity: 0;
+    animation-delay: var(--delay); /* Sequential delay for each item */
 }
 
 .hidden-menu ul li a {
@@ -95,24 +121,12 @@ a:hover {
     color: #1565c0;
 }
 
-/* When the menu is shown */
+/* Show Menu */
 .show-menu {
-    right: 0; /* Slide-in effect */
+    transform: translateX(0); /* Slide into view */
 }
 
-/* Keyframes for menu fade-in animation */
-@keyframes fadeInMenu {
-    0% {
-        opacity: 0;
-        transform: translateX(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* Keyframes for individual menu items */
+/* Keyframes for Menu Animation */
 @keyframes fadeInItem {
     0% {
         opacity: 0;
@@ -124,80 +138,59 @@ a:hover {
     }
 }
 
-
-.icons {
-    list-style-type: none;
-    font-size: xx-large;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    max-width: 320px;
-    margin: 1em auto;
+@-webkit-keyframes fadeInItem { /* Safari support */
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-.icons li {
-    display: inline;
-    width: 42px;
-}
-
-.icons a {
-    color: black;
-}
-
-.icons a:hover {
-    color: #1565c0;
-}
-
-/* Basic styling for the navbar items */
+/* Navbar Items (Horizontal Alignment) */
 .navbar {
-    list-style-type: none;
-    padding: 0;
+    list-style: none;
     display: flex;
+    gap: 20px;
+    padding: 0;
     justify-content: flex-end;
-    margin-bottom: 20px;
 }
 
-.navbar li {
-    margin: 0 15px;
-    position: relative; /* Necessary for positioning the pseudo-element */
-}
-
-.navbar a {
+.navbar li a {
     color: black;
     text-decoration: none;
     padding: 10px 15px;
-    display: inline-block;
-    transition: color 0.3s ease; /* Smooth color transition */
+    transition: color 0.3s ease;
 }
 
-/* Change text color on hover */
-.navbar a:hover {
-    color: #217ee7; /* Change to your desired color */
+.navbar li a:hover {
+    color: #217ee7;
 }
 
-/* Animation for the horizontal line on hover */
+/* Horizontal Underline Animation */
 .navbar li::after {
     content: "";
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 0; /* Initially hidden */
-    height: 2px; /* Thickness of the line */
-    background-color: #217ee7; /* Color of the line */
-    transition: width 0.3s ease; /* Animation effect */
+    width: 0;
+    height: 2px;
+    background-color: #217ee7;
+    transition: width 0.3s ease;
 }
 
-/* On hover, animate the line to appear under the text */
 .navbar li:hover::after {
-    width: 100%; /* Expands the line to the full width of the link */
+    width: 100%; /* Expands underline */
 }
 
+/* Small Font */
 .small-font {
-    font-size: 0.7em; /* Adjust the size as needed */
+    font-size: 0.7em;
 }
 
-/* Container for the horizontal reveal effect */
+/* Reveal Effect (for additional animations) */
 .reveal-container {
     position: relative;
     overflow: hidden;
@@ -216,20 +209,6 @@ a:hover {
     transition: width 1.5s ease;
 }
 
-.reveal-container::before {
-    left: 0;
-}
-
-.reveal-container::after {
-    right: 0;
-}
-
-.reveal-container p {
-    opacity: 0;
-    animation: fadeIn 1s ease 1.5s forwards;
-}
-
-/* Trigger the horizontal bars to expand and reveal the text */
 .reveal-container:hover::before,
 .reveal-container:hover::after {
     width: 100%;
@@ -242,90 +221,4 @@ a:hover {
     to {
         opacity: 1;
     }
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    gap: 15px;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #007BFF;
-}
-
-/* Hamburger Menu Icon */
-.menu-icon {
-    font-size: 2rem;
-    cursor: pointer;
-    padding: 10px;
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 1000;
-}
-
-.menu-icon i {
-    color: black;
-    transition: color 0.3s ease;
-}
-
-.menu-icon i:hover {
-    color: #217ee7;
-}
-
-/* Hidden Navigation Menu */
-.hidden-menu {
-    display: flex; /* Horizontal alignment */
-    justify-content: center; /* Center the items */
-    align-items: center; /* Vertically align */
-    position: fixed;
-    top: -100%; /* Start hidden above the screen */
-    left: 0;
-    width: 100%;
-    background: #f9f9f9;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 15px 0;
-    z-index: 999;
-    transition: top 0.5s ease; /* Smooth dropdown animation */
-}
-
-.hidden-menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-}
-
-.hidden-menu ul li {
-    margin: 0;
-}
-
-.hidden-menu ul li a {
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: black;
-    transition: color 0.3s ease;
-}
-
-.hidden-menu ul li a:hover {
-    color: #1565c0;
-}
-
-/* Show Menu */
-.show-menu {
-    top: 0; /* Slide down the menu */
 }
