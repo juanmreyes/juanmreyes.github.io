@@ -2,45 +2,21 @@
 
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Define title -->
-    <title>Michele Piffer</title>
+  <!-- Define title -->
+  <title>Michele Piffer</title>
 
-    <!-- Include favicon -->
-    <link rel="icon" type="image/png" href="favicon.png" sizes="32x32" />
-
-    <!-- Include style sheets -->
-    <link rel="stylesheet" href="main.css" />
-
-    <!-- Fonts from Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet" />
-
-    <!-- Load FontAwesome (for icons) -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-    />
-
-    <!-- Load Academicons (for more icons) -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.2/css/academicons.min.css"
-      integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg=="
-      crossorigin="anonymous"
-    />
-  </head>
+  <!-- Include style sheets -->
+  <link rel="stylesheet" href="main.css" />
+</head>
 
 <body>
   <!-- Hamburger Menu Icon -->
-  <div class="menu" onclick="toggleMenu()">
+  <div class="menu-trigger" onclick="toggleMenu()">
     <span></span>
     <span></span>
     <span></span>
@@ -49,69 +25,54 @@
   <!-- Hidden Navigation Menu -->
   <nav id="menu" class="hidden-menu">
     <ul>
-      <li style="--delay: 0.1s;"><a href="#news">News</a></li>
-      <li style="--delay: 0.2s;"><a href="#cv">CV</a></li>
-      <li style="--delay: 0.3s;"><a href="#research">Research</a></li>
-      <li style="--delay: 0.4s;"><a href="#workshops">Workshops</a></li>
-      <li style="--delay: 0.5s;"><a href="#notes">Notes and Codes</a></li>
-      <li style="--delay: 0.6s;"><a href="#teaching">Teaching</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#cv">CV</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#workshops">Workshops</a></li>
+      <li><a href="#notes">Notes and Codes</a></li>
+      <li><a href="#teaching">Teaching</a></li>
     </ul>
   </nav>
 
+  <section id="content">
+    <!-- Avatar image -->
+    <img src="photo.png" alt="Your Avatar" class="avatar" />
+
+    <!-- Text -->
+    <h1>Michele Piffer</h1>
+
+    <hr>
+    <p>
+      I am a Senior Lecturer in Economics at <a href="https://www.kcl.ac.uk" target="_blank">King's College London (KCL)</a> and a Senior Researcher at the <a href="https://www.bankofengland.co.uk/" target="_blank">Bank of England (BoE).</a>
+    </p>
+    <p>
+      <span class="small-font">Bayesian Econometrics, Time Series Analysis, Macroeconomics, and Monetary Policy</span>
+    </p>
+    <hr>
+
+    <!-- Icons -->
+    <ul class="icons">
+      <li>
+        <a href="#" title="Institutional website"><i class="fas fa-university"></i></a>
+      </li>
+      <li>
+        <a href="#" title="E-Mail"><i class="fas fa-envelope"></i></a>
+      </li>
+      <li>
+        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+      </li>
+      <li>
+        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </li>
+    </ul>
+  </section>
+
   <script>
-    // JavaScript to toggle the menu
     function toggleMenu() {
       const menu = document.getElementById('menu');
       menu.classList.toggle('show-menu');
     }
   </script>
-    
-    <section id="content">
-      <!-- Avatar image -->
-      <img src="photo.png" alt="Carl Barks" class="avatar" />
-
-      <!-- Text -->
-      <h1>Michele Piffer</h1>
-
-      <hr>
-      <p>
-      I am a Senior Lecturer in Economics at <a href="https://www.kcl.ac.uk" target="_blank">King's College London (KCL)</a> and a Senior Researcher at the <a href="https://www.bankofengland.co.uk/" target="blank">Bank of England (BoE).</a>
-      </p>
-      <p>
-      <span class="small-font">Bayesian Econometrics, Time Series Analysis, Macroeconomics, and Monetary Policy</span>
-      </p>
-      <hr>
-
-      <!-- Icons -->
-      <ul class="icons">
-        <li>
-          <a href="#" title="Institutional website"><i class="fas fa-university"></i></a>
-        </li>
-        <li>
-          <a href="#" title="E-Mail"><i class="fas fa-envelope"></i></a>
-        </li>
-        <li>
-          <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-        </li>
-        <li>
-          <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        </li>
-        <li>
-          <a href="#" title="NASA / ADS"><i class="ai ai-ads"></i></a>
-        </li>
-        <li>
-          <a href="#" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-        </li>
-      </ul>
-    </section>
-
-  <!-- JavaScript Function -->
-    <script>
-      function toggleMenu() {
-        const menu = document.getElementById('menu');
-        menu.classList.toggle('show-menu');
-      }
-    </script>
-  </body>
+</body>
 
 </html>
