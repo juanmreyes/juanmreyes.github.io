@@ -176,65 +176,65 @@ nav ul li a:hover {
 
 /* Hamburger Menu Icon */
 .menu-icon {
-    font-size: 2rem; /* Size of the icon */
+    font-size: 2rem;
     cursor: pointer;
     padding: 10px;
     position: fixed;
     top: 10px;
-    left: 10px;
+    right: 10px;
     z-index: 1000;
 }
 
 .menu-icon i {
-    color: black; /* Color of the icon */
+    color: black;
     transition: color 0.3s ease;
 }
 
 .menu-icon i:hover {
-    color: #217ee7; /* Hover color */
+    color: #217ee7;
 }
 
 /* Hidden Navigation Menu */
 .hidden-menu {
-    display: none; /* Initially hidden */
+    display: flex; /* Horizontal alignment */
+    justify-content: center; /* Center the items */
+    align-items: center; /* Vertically align */
     position: fixed;
-    top: 0;
+    top: -100%; /* Start hidden above the screen */
     left: 0;
-    width: 200px;
-    height: 100%;
-    background: #f9f9f9; /* Light background color */
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
-    z-index: 999; /* Ensure it appears on top */
+    width: 100%;
+    background: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    z-index: 999;
+    transition: top 0.5s ease; /* Smooth dropdown animation */
 }
 
 .hidden-menu ul {
-    list-style-type: none;
+    list-style: none;
+    margin: 0;
     padding: 0;
+    display: flex;
+    gap: 20px;
 }
 
 .hidden-menu ul li {
-    margin-bottom: 15px;
+    margin: 0;
 }
 
 .hidden-menu ul li a {
     text-decoration: none;
     font-size: 1.2rem;
+    font-weight: bold;
     color: black;
-    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
 .hidden-menu ul li a:hover {
-    color: #1565c0; /* Hover effect */
+    color: #1565c0;
 }
 
 /* Show Menu */
 .show-menu {
-    display: block; /* Show the menu */
+    top: 0; /* Slide down the menu */
 }
-
-/* For Accessibility: Disable Scroll When Menu is Open */
-body.menu-open {
-    overflow: hidden;
-}
-
