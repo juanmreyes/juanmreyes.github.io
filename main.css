@@ -173,3 +173,68 @@ nav ul li a {
 nav ul li a:hover {
     color: #007BFF;
 }
+
+/* Hamburger Menu Icon */
+.menu-icon {
+    font-size: 2rem; /* Size of the icon */
+    cursor: pointer;
+    padding: 10px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+.menu-icon i {
+    color: black; /* Color of the icon */
+    transition: color 0.3s ease;
+}
+
+.menu-icon i:hover {
+    color: #217ee7; /* Hover color */
+}
+
+/* Hidden Navigation Menu */
+.hidden-menu {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background: #f9f9f9; /* Light background color */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 999; /* Ensure it appears on top */
+}
+
+.hidden-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.hidden-menu ul li {
+    margin-bottom: 15px;
+}
+
+.hidden-menu ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+    font-weight: 600;
+}
+
+.hidden-menu ul li a:hover {
+    color: #1565c0; /* Hover effect */
+}
+
+/* Show Menu */
+.show-menu {
+    display: block; /* Show the menu */
+}
+
+/* For Accessibility: Disable Scroll When Menu is Open */
+body.menu-open {
+    overflow: hidden;
+}
+
