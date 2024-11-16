@@ -61,18 +61,38 @@ a:hover {
 
 /* Hamburger Menu Trigger */
 .menu-trigger {
-    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
     cursor: pointer;
     position: fixed;
     top: 15px;
     right: 15px;
     z-index: 1000;
-    color: #333;
-    font-weight: bold;
 }
 
-.menu-trigger:hover {
-    color: #1565c0;
+.menu-trigger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Change Hamburger Icon Appearance When Menu is Open */
+.show-menu ~ .menu-trigger span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.show-menu ~ .menu-trigger span:nth-child(2) {
+    opacity: 0;
+}
+
+.show-menu ~ .menu-trigger span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
 }
 
 /* Hidden Navigation Menu */
