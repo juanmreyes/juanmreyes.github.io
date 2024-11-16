@@ -100,3 +100,111 @@ a:hover {
 .small-font {
     font-size: 0.7em;
 }
+
+/* Reset Styles */
+body, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Hamburger Menu Icon */
+.menu-trigger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1000;
+}
+
+.menu-trigger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Change Hamburger Icon Appearance When Menu is Open */
+.show-menu ~ .menu-trigger span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.show-menu ~ .menu-trigger span:nth-child(2) {
+  opacity: 0;
+}
+
+.show-menu ~ .menu-trigger span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Hidden Navigation Menu */
+.hidden-menu {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Off-screen initially */
+  width: 250px;
+  height: 100%;
+  background: #f9f9f9;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  transition: transform 0.5s ease;
+  transform: translateX(100%);
+}
+
+.hidden-menu ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.hidden-menu ul li {
+  opacity: 0; /* Initially invisible */
+  transform: translateX(20px); /* Start shifted */
+  animation: slideIn 0.5s ease forwards;
+  animation-delay: var(--delay); /* Apply sequential delay */
+}
+
+.hidden-menu ul li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #333;
+  padding: 10px;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.hidden-menu ul li a:hover {
+  color: #1565c0;
+}
+
+/* Show Menu */
+.show-menu {
+  transform: translateX(0); /* Slide menu into view */
+}
+
+/* Keyframes for Menu Items */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
