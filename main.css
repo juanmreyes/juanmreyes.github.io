@@ -100,3 +100,36 @@ a:hover {
 .small-font {
     font-size: 0.7em;
 }
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f9f9f9; /* Adjust as needed */
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+  width: 50px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 15px; /* Space between logo and navbar */
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+}
