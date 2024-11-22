@@ -3,15 +3,16 @@ html {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: larger;
     font-weight: 300;
+    color: white;
 }
 
 a {
     text-decoration: none;
-    color: #1565c0;
+    color: white;
 }
 
 a:hover {
-    color: #217ee7;
+    color: lightgray; /* Light gray for hover effect */
 }
 
 /* Main Content */
@@ -23,11 +24,13 @@ a:hover {
     text-align: center;
     max-width: 520px;
     padding: 32px;
-    line-height: 1.6em;
+    line-height: 1.6em
+    color: white; /* Ensures paragraph text is white */
 }
 
 #content p {
     text-align: justify;
+    color: white;
 }
 
 .avatar {
@@ -47,12 +50,13 @@ a:hover {
     margin: 1em auto;
 }
 
-.icons li {
-    width: 42px;
+/* Icons */
+.icons a {
+    color: white; /* Makes the icons white */
 }
 
-.icons a {
-    color: black;
+.icons a:hover {
+    color: lightgray; /* Hover effect for icons */
 }
 
 .icons a:hover {
@@ -69,15 +73,16 @@ a:hover {
     margin-bottom: 20px;
 }
 
+/* Navbar */
 .navbar li a {
-    color: black;
+    color: white; /* Makes navbar links white */
     text-decoration: none;
     padding: 10px 15px;
     transition: color 0.3s ease;
 }
 
 .navbar li a:hover {
-    color: #217ee7;
+    color: lightgray; /* Hover effect for navbar links */
 }
 
 /* Horizontal Underline Animation */
@@ -88,7 +93,7 @@ a:hover {
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: #217ee7;
+    background-color: white; /* White underline */
     transition: width 0.3s ease;
 }
 
@@ -99,7 +104,9 @@ a:hover {
 /* Small Font */
 .small-font {
     font-size: 0.7em;
+    color: white; /* Ensures small text is also white */
 }
+
 
 body {
     background-image: url('background.jpg');
@@ -107,5 +114,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    color: white;
 }
 
