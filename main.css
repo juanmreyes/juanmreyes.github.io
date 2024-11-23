@@ -63,18 +63,19 @@ html, body {
 
 /* Main Content */
 #content {
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     max-width: 520px;
-    padding: 32px;
+    padding: 24px;
     line-height: 1.6em
 }
 
 #content p {
     text-align: justify; /* Aligns text for better readability */
+    font-size: 0.9rem; /* Smaller text for paragraphs */
 }
 
 .avatar {
@@ -84,8 +85,8 @@ html, body {
 }
 
 h1 {
-    font-size: 2.5rem; /* Adjusts heading size */
-    margin: 20px 0; /* Adds spacing around the heading */
+    font-size: 2rem; /* Adjusts heading size */
+    margin: 15px 0; /* Adds spacing around the heading */
 }
 
 /* Icons (Logos) */
