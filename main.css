@@ -54,14 +54,15 @@ a:hover {
 /* Icons */
 .icons a {
     color: white; /* Makes the icons white */
+    transition: color 0.3s ease; /* Smooth transition effect */
 }
 
 .icons a:hover {
-    color: lightgray; /* Hover effect for icons */
+    color: gold; /* Hover effect for icons */
 }
 
 .icons a:hover {
-    color: #1565c0;
+    color: gold;
 }
 
 /* Navbar */
