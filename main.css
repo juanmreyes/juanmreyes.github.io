@@ -1,9 +1,18 @@
 /* Global Styles */
-html {
+html, body {
+    width: 1200px; /* Fixed width of the page */
+    height: 800px; /* Fixed height of the page */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    overflow: auto; /* Enables scrollbars if content overflows */
+    background-image: url('background.jpg'); /* Background image */
+    background-size: cover; /* Ensures the background covers the fixed area */
+    background-repeat: no-repeat; /* Prevents background repetition */
+    background-position: center; /* Centers the background */
     font-family: 'Source Sans Pro', sans-serif;
     font-size: larger;
     font-weight: 300;
-    color: white;
+    color: white; /* Default text color */
 }
 
 a {
@@ -18,20 +27,19 @@ a:hover {
 
 /* Main Content */
 #content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative; /* Positions content within the fixed layout */
+    width: 100%; /* Matches the body width */
+    height: 100%; /* Matches the body height */
     text-align: center;
-    max-width: 520px;
-    padding: 32px;
-    line-height: 1.6em
-    color: white; /* Ensures paragraph text is white */
+    max-width: 800px; /* Optional: Constrain content width */
+    padding: 20px;
+    box-sizing: border-box; /* Includes padding in dimensions */
+    overflow: auto; /* Adds scrollbars for overflowing content */
 }
 
 #content p {
     text-align: justify;
-    color: white;
+    color: white; /* Ensures paragraph text is white */
 }
 
 .avatar {
