@@ -16,12 +16,22 @@ a:hover {
     color: gold; /* Light gray for hover effect */
 }
 
+/* Specific Links (Gold by Default) */
+a[href*="kcl.ac.uk"], a[href*="bankofengland.co.uk"] {
+    color: gold; /* Default color: gold for these links */
+}
+
+a[href*="kcl.ac.uk"]:hover, a[href*="bankofengland.co.uk"]:hover {
+    color: lightgoldenrodyellow; /* Lighter gold on hover for better visibility */
+}
+
+
 /* Main Content */
 #content {
     position: relative;
     margin: 0 auto;
     text-align: center;
-    max-width: 580px;
+    max-width: 550px;
     padding: 32px;
     line-height: 1.8em;
 }
@@ -71,9 +81,14 @@ a:hover {
     justify-content: flex-end;
     gap: 20px;
     margin-bottom: 20px;
+    position: relative;
 }
 
-/* Navbar */
+/* Navbar Links */
+.navbar li {
+    position: relative; /* Needed to position the underline correctly */
+}
+
 .navbar li a {
     color: white; /* Makes navbar links white */
     text-decoration: none;
@@ -85,20 +100,20 @@ a:hover {
     color: gold; /* Hover effect for navbar links */
 }
 
-/* Horizontal Underline Animation */
+/* Underline Animation */
 .navbar li::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 0; /* Places the underline at the bottom of the link */
     width: 0;
-    height: 2px;
-    background-color: white; /* White underline */
-    transition: width 0.3s ease;
+    height: 2px; /* Thickness of the underline */
+    background-color: gold; /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth animation */
 }
 
 .navbar li:hover::after {
-    width: 100%;
+    width: 100%; /* Full width underline on hover */
 }
 
 /* Small Font */
