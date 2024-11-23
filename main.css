@@ -3,12 +3,15 @@ html {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: larger;
     font-weight: 300;
+    margin-right: 20px;
+    justify-content: flex-end;
+    display: flex;
 }
 
 body {
     margin: 0; /* Removes default margin */
     padding: 0; /* Removes default padding */
-    background-image: url('background.jpg'); /* Background image */
+    background-image: url('background2.jpg'); /* Background image */
     background-size: cover; /* Ensures the background covers the viewport */
     background-repeat: no-repeat; /* Prevents background repetition */
     background-attachment: fixed; /* Keeps the background fixed */
@@ -115,6 +118,10 @@ a[href*="kcl.ac.uk"]:hover, a[href*="bankofengland.co.uk"]:hover {
 
 .navbar li:hover::after {
     width: 100%; /* Full width underline on hover */
+}
+
+.navbar li:last-child {
+    margin-right: 20px; /* Moves "Teaching" slightly inward */
 }
 
 /* Small Font */
