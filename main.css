@@ -1,11 +1,11 @@
 /* Global Styles */
 html, body {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: larger;
+    font-size: medium;
     font-weight: 300;
     margin: 0;
     padding: 0;
-    background-image: url('background2.png');
+    background-image: url('background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -19,120 +19,115 @@ html, body {
     padding: 0;
     display: flex;
     justify-content: flex-end;
-    gap: 20px; /* Consistent spacing between links */
-    margin-right: 20px; /* Moves the entire navbar inward from the browser's edge */
-    margin-top: 20px; /* Adds spacing above the navbar */
+    gap: 20px; /* Spacing between links */
+    margin: 20px 40px 0 40px; /* Add spacing around navbar */
+    position: relative; /* To maintain placement */
+    align-items: center; /* Ensures vertical alignment */
 }
 
-/* Navbar Links */
 .navbar li {
-    position: relative; /* Keeps underline animation positioned properly */
+    position: relative;
 }
 
 .navbar li a {
-    color: white; /* Default link color */
+    color: white;
     text-decoration: none;
-    padding: 10px 15px; /* Adds padding for clickable area */
-    transition: color 0.3s ease; /* Smooth color transition on hover */
+    padding: 8px 15px; /* Adds padding around text for easier clicking */
+    font-size: 1rem; /* Slightly smaller font */
+    transition: color 0.3s ease;
 }
 
 .navbar li a:hover {
-    color: gold; /* Gold color on hover */
+    color: gold;
 }
 
-/* Adjust the last link ("Teaching") */
-.navbar li:last-child {
-    margin-right: 20px; /* Moves the last item inward */
-}
-
-/* Underline Animation */
 .navbar li::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0; /* Places the underline at the bottom of the link */
+    bottom: 0;
     width: 0;
-    height: 2px; /* Thickness of the underline */
-    background-color: gold; /* Color of the underline */
-    transition: width 0.3s ease; /* Smooth animation effect */
+    height: 2px;
+    background-color: gold;
+    transition: width 0.3s ease;
 }
 
 .navbar li:hover::after {
-    width: 100%; /* Full-width underline on hover */
+    width: 100%;
 }
 
 /* Main Content */
 #content {
     position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 0 auto;
     text-align: center;
-    max-width: 520px;
-    padding: 24px;
-    line-height: 1.6em
+    max-width: 700px; /* Slightly reduced width */
+    padding: 24px; /* Adds padding around the content */
+    line-height: 1.6em; /* Adjusted line height for text readability */
+    margin-top: 30px; /* Adds spacing below the navbar */
+}
+
+#content h1 {
+    font-size: 2.5rem; /* Adjusted heading size */
+    margin-bottom: 20px; /* Adds spacing below the heading */
 }
 
 #content p {
-    text-align: justify; /* Aligns text for better readability */
-    font-size: 0.9rem; /* Smaller text for paragraphs */
+    text-align: justify;
+    font-size: 1rem; /* Adjusted font size for better readability */
+    margin-bottom: 20px; /* Adds spacing below the paragraph */
 }
 
 .avatar {
     border-radius: 50%;
-    width: 150px; /* Avatar size */
+    width: 120px; /* Smaller avatar size */
     margin-bottom: 20px; /* Adds spacing below the avatar */
-}
-
-h1 {
-    font-size: 2rem; /* Adjusts heading size */
-    margin: 15px 0; /* Adds spacing around the heading */
 }
 
 /* Icons (Logos) */
 .icons {
     list-style: none;
-    font-size: xx-large;
+    font-size: large;
     padding: 0;
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    max-width: 320px;
-    margin: 1em auto;
+    width: 60%;
+    max-width: 300px; /* Smaller width for icons container */
+    margin: 30px auto; /* Adds spacing above and below icons */
 }
 
 .icons a {
-    font-size: 2rem; /* Ensures consistent logo size */
-    color: white; /* Default logo color */
-    transition: color 0.3s ease; /* Smooth transition */
+    font-size: 1.5rem; /* Reduced icon size */
+    color: white;
+    transition: color 0.3s ease;
 }
 
 .icons a:hover {
-    color: gold; /* Turns logos gold on hover */
+    color: gold;
 }
 
 /* Hyperlinks */
 a {
     text-decoration: none;
-    color: white; /* Default color for all links */
-    transition: color 0.3s ease; /* Smooth transition effect */
+    color: white;
+    transition: color 0.3s ease;
 }
 
 a:hover {
-    color: gold; /* Hover color for links */
+    color: gold;
 }
 
 /* Specific Links (Gold by Default) */
 a[href*="kcl.ac.uk"], a[href*="bankofengland.co.uk"] {
-    color: gold; /* Gold by default for these specific links */
+    color: gold;
 }
 
 a[href*="kcl.ac.uk"]:hover, a[href*="bankofengland.co.uk"]:hover {
-    color: lightgoldenrodyellow; /* Lighter gold on hover for these links */
+    color: lightgoldenrodyellow;
 }
 
 /* Small Font */
 .small-font {
-    font-size: 0.7em;
-    color: white; /* Ensures small text is white */
+    font-size: 0.9em;
+    color: white;
 }
