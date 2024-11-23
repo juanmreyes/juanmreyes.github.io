@@ -1,7 +1,7 @@
 /* Global Styles */
 html, body {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: medium;
+    font-size: large;
     font-weight: 300;
     margin: 0;
     padding: 0;
@@ -33,7 +33,7 @@ html, body {
     color: white;
     text-decoration: none;
     padding: 8px 15px; /* Adds padding around text for easier clicking */
-    font-size: 1rem; /* Slightly smaller font */
+    font-size: 1.2rem; /* Slightly smaller font */
     transition: color 0.3s ease;
 }
 
@@ -64,7 +64,7 @@ html, body {
     max-width: 520px; /* Slightly reduced width */
     padding: 24px; /* Adds padding around the content */
     line-height: 1.6em; /* Adjusted line height for text readability */
-    margin-top: 30px; /* Adds spacing below the navbar */
+    margin-top: 50px; /* Adds spacing below the navbar */
 }
 
 #content h1 {
@@ -80,7 +80,8 @@ html, body {
 
 .avatar {
     border-radius: 50%;
-    width: 120px; /* Smaller avatar size */
+    width: 140px; /* Smaller avatar size */
+    border: 3px solid white; /* Added a white border */
     margin-bottom: 20px; /* Adds spacing below the avatar */
 }
 
