@@ -133,26 +133,3 @@ a[href*="kcl.ac.uk"]:hover, a[href*="bankofengland.co.uk"]:hover {
     color: white; /* Ensures small text is white */
 }
 
-/* Footer Section */
-.footer {
-    display: flex;
-    justify-content: center; /* Centers the footer horizontally */
-    align-items: center; /* Aligns the footer vertically */
-    font-size: 0.8em; /* Footnote-size text */
-    color: white; /* White text color */
-    opacity: 0.8; /* Slight transparency */
-    font-family: 'Source Sans Pro', sans-serif;
-    padding: 10px; /* Adds some spacing inside the footer */
-    margin-bottom: 20px; /* Matches the logo alignment */
-}
-
-.footer a {
-    color: gold; /* Default link color */
-    text-decoration: none; /* Removes underline */
-    transition: color 0.3s ease; /* Smooth hover effect */
-}
-
-.footer a:hover {
-    color: gold; /* Hover color */
-}
-
