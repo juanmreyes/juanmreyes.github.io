@@ -3,69 +3,42 @@ html {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: larger;
     font-weight: 300;
-    margin-right: 20px;
-    justify-content: flex-end;
-    display: flex;
+    color: white;
 }
 
-body {
-    margin: 0; /* Removes default margin */
-    padding: 0; /* Removes default padding */
-    background-image: url('background2.png'); /* Background image */
-    background-size: cover; /* Ensures the background covers the viewport */
-    background-repeat: no-repeat; /* Prevents background repetition */
-    background-attachment: fixed; /* Keeps the background fixed */
-    background-position: center; /* Centers the background */
-    color: white; /* Default text color */
-}
-
-/* Hyperlinks */
 a {
     text-decoration: none;
-    color: white; /* Default color: white */
-    transition: color 0.3s ease; /* Smooth transition */
+    color: white;
 }
 
 a:hover {
-    color: gold; /* Hover color: gold */
-}
-
-/* Specific Links */
-a[href*="kcl.ac.uk"], a[href*="bankofengland.co.uk"] {
-    color: gold; /* Default color: gold for these links */
-}
-
-a[href*="kcl.ac.uk"]:hover, a[href*="bankofengland.co.uk"]:hover {
-    color: lightgoldenrodyellow; /* Lighter gold on hover for better visibility */
+    color: lightgray; /* Light gray for hover effect */
 }
 
 /* Main Content */
 #content {
-    position: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     max-width: 520px;
     padding: 32px;
-    line-height: 1.6em;
-    color: white; /* Ensures content text is white */
+    line-height: 1.6em
+    color: white; /* Ensures paragraph text is white */
 }
 
 #content p {
     text-align: justify;
+    color: white;
 }
 
-/* Avatar */
 .avatar {
     border-radius: 50%;
-    width: 150px; /* Avatar size */
+    width: 150px;
 }
 
-/* Icons (Logos) */
+/* Icons */
 .icons {
     list-style: none;
     font-size: xx-large;
@@ -77,13 +50,17 @@ a[href*="kcl.ac.uk"]:hover, a[href*="bankofengland.co.uk"]:hover {
     margin: 1em auto;
 }
 
+/* Icons */
 .icons a {
-    color: white; /* Default logo color */
-    transition: color 0.3s ease; /* Smooth transition */
+    color: white; /* Makes the icons white */
 }
 
 .icons a:hover {
-    color: gold; /* Hover color: gold */
+    color: lightgray; /* Hover effect for icons */
+}
+
+.icons a:hover {
+    color: #1565c0;
 }
 
 /* Navbar */
@@ -96,40 +73,47 @@ a[href*="kcl.ac.uk"]:hover, a[href*="bankofengland.co.uk"]:hover {
     margin-bottom: 20px;
 }
 
-.navbar li {
-    position: relative; /* Keeps underline animation positioned properly */
-}
-
+/* Navbar */
 .navbar li a {
-    color: white; /* Default navbar link color */
+    color: white; /* Makes navbar links white */
     text-decoration: none;
     padding: 10px 15px;
     transition: color 0.3s ease;
 }
 
-/* Underline Animation */
+.navbar li a:hover {
+    color: lightgray; /* Hover effect for navbar links */
+}
+
+/* Horizontal Underline Animation */
 .navbar li::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0; /* Places the underline at the bottom of the link */
+    bottom: 0;
     width: 0;
-    height: 2px; /* Thickness of the underline */
-    background-color: gold; /* Color of the underline */
-    transition: width 0.3s ease; /* Smooth animation */
+    height: 2px;
+    background-color: white; /* White underline */
+    transition: width 0.3s ease;
 }
 
 .navbar li:hover::after {
-    width: 100%; /* Full width underline on hover */
-}
-
-.navbar li:last-child {
-    margin-right: 20px; /* Moves "Teaching" slightly inward */
+    width: 100%;
 }
 
 /* Small Font */
 .small-font {
     font-size: 0.7em;
-    color: white; /* Ensures small text is white */
+    color: white; /* Ensures small text is also white */
+}
+
+
+body {
+    background-image: url('background2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
 }
 
