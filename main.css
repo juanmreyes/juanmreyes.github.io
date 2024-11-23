@@ -41,7 +41,10 @@ a[href*="kcl.ac.uk"]:hover, a[href*="bankofengland.co.uk"]:hover {
 
 /* Main Content */
 #content {
-    position: absolute;
+    position: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -132,14 +135,15 @@ a[href*="kcl.ac.uk"]:hover, a[href*="bankofengland.co.uk"]:hover {
 
 /* Footer Section */
 .footer {
-    position: absolute; /* Sticks to the bottom */
-    bottom: 10px; /* Adds a gap from the bottom */
-    width: 100%; /* Spans the full width of the page */
-    text-align: center; /* Centers the text */
-    font-size: 0.8em; /* Small text size, similar to footnotes */
+    display: flex;
+    justify-content: center; /* Centers the footer horizontally */
+    align-items: center; /* Aligns the footer vertically */
+    font-size: 0.8em; /* Footnote-size text */
     color: white; /* White text color */
-    opacity: 0.8; /* Slight transparency for a subtle look */
-    font-family: 'Source Sans Pro', sans-serif; /* Matches the site font */
+    opacity: 0.8; /* Slight transparency */
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 10px; /* Adds some spacing inside the footer */
+    margin-bottom: 20px; /* Matches the logo alignment */
 }
 
 .footer a {
