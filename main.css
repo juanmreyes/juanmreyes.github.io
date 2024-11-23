@@ -109,10 +109,11 @@ a:hover {
 
 
 body {
-    background-image: url('background2.jpg');
+    background-image: url('background2.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    color: white;
 }
 
