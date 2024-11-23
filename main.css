@@ -1,32 +1,27 @@
-/* Global Styles */
 html {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: larger;
     font-weight: 300;
-    color: white; /* Default text is white */
+    color: white; 
 }
 
 a {
     text-decoration: none;
     color: white;
-    transition: color 0.3s ease; /* Smooth transition effect */
+    transition: color 0.3s ease; 
 }
 
 a:hover {
-    color: gold; /* Light gray for hover effect */
+    color: gold;
 }
 
-/* Specific Links (Gold by Default) */
 a[href*="kcl.ac.uk"], a[href*="bankofengland.co.uk"] {
-    color: gold; /* Default color: gold for these links */
+    color: gold; 
 }
 
 a[href*="kcl.ac.uk"]:hover, a[href*="bankofengland.co.uk"]:hover {
-    color: lightgoldenrodyellow; /* Lighter gold on hover for better visibility */
-}
+    color: lightgoldenrodyellow; 
 
-
-/* Main Content */
 #content {
     position: relative;
     margin: 0 auto;
@@ -38,7 +33,7 @@ a[href*="kcl.ac.uk"]:hover, a[href*="bankofengland.co.uk"]:hover {
 
 #content p {
     text-align: justify;
-    color: white; /* Ensures paragraph text is white */
+    color: white; 
 }
 
 .avatar {
@@ -47,7 +42,6 @@ a[href*="kcl.ac.uk"]:hover, a[href*="bankofengland.co.uk"]:hover {
     margin-bottom: 20px;
 }
 
-/* Icons */
 .icons {
     list-style: none;
     font-size: xx-large;
@@ -61,19 +55,19 @@ a[href*="kcl.ac.uk"]:hover, a[href*="bankofengland.co.uk"]:hover {
 
 /* Icons */
 .icons a {
-    color: white; /* Makes the icons white */
-    transition: color 0.3s ease; /* Smooth transition effect */
+    color: white; 
+    transition: color 0.3s ease;
 }
 
 .icons a:hover {
-    color: gold; /* Hover effect for icons */
+    color: gold; 
 }
 
 .icons a:hover {
     color: gold;
 }
 
-/* Navbar */
+
 .navbar {
     list-style: none;
     padding: 0;
@@ -85,28 +79,26 @@ a[href*="kcl.ac.uk"]:hover, a[href*="bankofengland.co.uk"]:hover {
     position: relative;
 }
 
-/* Navbar Links */
 .navbar li {
-    position: relative; /* Needed to position the underline correctly */
+    position: relative; 
 }
 
 .navbar li a {
-    color: white; /* Makes navbar links white */
+    color: white; 
     text-decoration: none;
     padding: 10px 15px;
     transition: color 0.3s ease;
 }
 
 .navbar li a:hover {
-    color: gold; /* Hover effect for navbar links */
+    color: gold; 
 }
 
-/* Underline Animation */
 .navbar li::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0; /* Places the underline at the bottom of the link */
+    bottom: 0; 
     width: 0;
     height: 2px; /* Thickness of the underline */
     background-color: gold; /* Color of the underline */
@@ -118,24 +110,34 @@ a[href*="kcl.ac.uk"]:hover, a[href*="bankofengland.co.uk"]:hover {
 }
 
 .navbar li:last-child {
-    margin-right: 20px; /* Moves "Teaching" slightly inward */
+    margin-right: 20px; 
 }
 
-/* Small Font */
 .small-font {
     font-size: 0.7em;
-    color: white; /* Ensures small text is also white */
+    color: white; 
 }
-
 
 body {
     background-image: url('background2.png');
-   background-size: cover; /* Ensures the background covers the entire viewport */
-    background-repeat: no-repeat; /* Prevents the background from repeating */
-    background-attachment: fixed; /* Keeps the background fixed while scrolling */
-    background-position: center; /* Centers the background */
-    width: 100vw; /* Ensures the width matches the viewport */
-    height: 100vh; /* Ensures the height matches the viewport */
-    overflow: hidden; /* Prevents extra scrolling that might expose empty areas */
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center; 
+    width: 100vw; 
+    height: 100vh; 
+    overflow: hidden; 
+}
+
+/* Footer Section */
+.footer {
+    position: absolute; 
+    bottom: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    font-size: 0.7em; 
+    color: white; 
+    opacity: 0.7; 
+    text-align: center; 
 }
 
