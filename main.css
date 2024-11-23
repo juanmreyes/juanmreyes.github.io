@@ -5,7 +5,7 @@ html, body {
     font-weight: 300;
     margin: 0;
     padding: 0;
-    background-image: url('background.jpg');
+    background-image: url('background2.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -61,7 +61,7 @@ html, body {
     position: relative;
     margin: 0 auto;
     text-align: center;
-    max-width: 700px; /* Slightly reduced width */
+    max-width: 520px; /* Slightly reduced width */
     padding: 24px; /* Adds padding around the content */
     line-height: 1.6em; /* Adjusted line height for text readability */
     margin-top: 30px; /* Adds spacing below the navbar */
@@ -97,7 +97,7 @@ html, body {
 }
 
 .icons a {
-    font-size: 1.5rem; /* Reduced icon size */
+    font-size: 2rem; /* Reduced icon size */
     color: white;
     transition: color 0.3s ease;
 }
