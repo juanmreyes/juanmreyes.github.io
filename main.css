@@ -1,3 +1,4 @@
+/* Global Styles */
 html {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: larger;
@@ -118,7 +119,7 @@ a[href*="kcl.ac.uk"]:hover, a[href*="bankofengland.co.uk"]:hover {
     color: white; 
 }
 
-body {
+.body {
     background-image: url('background2.png');
     background-size: cover; 
     background-repeat: no-repeat; 
