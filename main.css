@@ -129,3 +129,26 @@ a[href*="kcl.ac.uk"]:hover, a[href*="bankofengland.co.uk"]:hover {
     font-size: 0.7em;
     color: white; /* Ensures small text is white */
 }
+
+/* Footer Section */
+.footer {
+    position: absolute; /* Sticks to the bottom */
+    bottom: 10px; /* Adds a gap from the bottom */
+    width: 100%; /* Spans the full width of the page */
+    text-align: center; /* Centers the text */
+    font-size: 0.8em; /* Small text size, similar to footnotes */
+    color: white; /* White text color */
+    opacity: 0.8; /* Slight transparency for a subtle look */
+    font-family: 'Source Sans Pro', sans-serif; /* Matches the site font */
+}
+
+.footer a {
+    color: gold; /* Default link color */
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.footer a:hover {
+    color: gold; /* Hover color */
+}
+
