@@ -1,18 +1,9 @@
 /* Global Styles */
-html, body {
-    width: 1200px; /* Fixed width of the page */
-    height: 800px; /* Fixed height of the page */
-    margin: 0; /* Removes default margin */
-    padding: 0; /* Removes default padding */
-    overflow: auto; /* Enables scrollbars if content overflows */
-    background-image: url('background.jpg'); /* Background image */
-    background-size: cover; /* Ensures the background covers the fixed area */
-    background-repeat: no-repeat; /* Prevents background repetition */
-    background-position: center; /* Centers the background */
+html {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: larger;
     font-weight: 300;
-    color: white; /* Default text color */
+    color: white; /* Default text is white */
 }
 
 a {
