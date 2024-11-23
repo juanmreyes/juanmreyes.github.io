@@ -9,10 +9,11 @@ html {
 a {
     text-decoration: none;
     color: white;
+    transition: color 0.3s ease; /* Smooth transition effect */
 }
 
 a:hover {
-    color: lightgray; /* Light gray for hover effect */
+    color: gold; /* Light gray for hover effect */
 }
 
 /* Main Content */
@@ -82,7 +83,7 @@ a:hover {
 }
 
 .navbar li a:hover {
-    color: lightgray; /* Hover effect for navbar links */
+    color: gold; /* Hover effect for navbar links */
 }
 
 /* Horizontal Underline Animation */
