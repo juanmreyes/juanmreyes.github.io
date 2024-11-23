@@ -18,14 +18,14 @@ a:hover {
 
 /* Main Content */
 #content {
-    position: relative; /* Positions content within the fixed layout */
-    width: 100%; /* Matches the body width */
-    height: 100%; /* Matches the body height */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    max-width: 800px; /* Optional: Constrain content width */
-    padding: 20px;
-    box-sizing: border-box; /* Includes padding in dimensions */
-    overflow: auto; /* Adds scrollbars for overflowing content */
+    max-width: 520px;
+    padding: 32px;
+    line-height: 1.6em;
 }
 
 #content p {
