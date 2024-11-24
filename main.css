@@ -31,9 +31,9 @@ html, body {
 
 .navbar-logo {
     position: absolute;
-    top: -20px; /* Adjust to align with the navbar vertically */
+    top: -40px; /* Adjust to align with the navbar vertically */
     left: 20px; /* Adjust for horizontal placement */
-    height: 200px; /* Set the size of the logo */
+    height: 400px; /* Set the size of the logo */
     z-index: 1; /* Ensure the logo appears above the navbar */
 }
 
