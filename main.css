@@ -33,7 +33,7 @@ html, body {
     position: absolute;
     top: -80px; /* Adjust to align with the navbar vertically */
     left: 20px; /* Adjust for horizontal placement */
-    height: 400px; /* Set the size of the logo */
+    height: 200px; /* Set the size of the logo */
     z-index: 1; /* Ensure the logo appears above the navbar */
 }
 
