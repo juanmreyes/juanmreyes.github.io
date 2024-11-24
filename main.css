@@ -132,3 +132,7 @@ a[href*="kcl.ac.uk"]:hover, a[href*="bankofengland.co.uk"]:hover {
     font-size: 0.7em;
     color: white;
 }
+
+.news-list {
+  font-size: 1.2rem;
+}
