@@ -128,11 +128,11 @@ a:hover {
 
 /* Specific Links (Gold by Default) */
 a[href*="kcl.ac.uk"], a[href*="bankofengland.co.uk"] {
-    color: white;
+    color: gold;
 }
 
 a[href*="kcl.ac.uk"]:hover, a[href*="bankofengland.co.uk"]:hover {
-    color: gold;
+    color: lightgoldenyellow;
 }
 
 /* Small Font */
